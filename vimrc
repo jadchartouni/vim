@@ -36,7 +36,12 @@ nmap <Leader>ev :tabedit $MYVIMRC<cr>
 nmap <Leader><space> :nohlsearch<cr>
 
 "Make NERDTree easier to toggle
-nmap <D-1> :NERDTreeToggle<cr>
+nmap <Leader>1 :NERDTreeToggle<cr>
+
+"Make CtrlP Buf easier to toggle
+nmap <Leader>e :CtrlPMRUFiles<cr>
+nmap <Leader>r :CtrlPBufTag<cr>
+
 
 "----------Auto-commands----------"
 
