@@ -4,24 +4,19 @@ so ~/.vim/plugins.vim
 
 syntax enable
 
-set backspace=indent,eol,start			"Make backspace behave like every other editor.
 let mapleader = ','				"The default leader is \, but a comma is much better.
-set number					"Activate line numbers
 
-
-"----------Visuals----------"
 colorscheme atom-dark
 set t_CO=256 					"Use 256 colors.
-
-
-"----------Search----------"
+set background=dark
+set backspace=indent,eol,start			"Make backspace behave like every other editor.
+set encoding=utf-8
+set nowrap					"Don't wrap lines by default
+set number					"Activate line numbers
 set hlsearch
 set incsearch
-
-
-"----------Split management----------"
-set splitbelow
-set splitright
+set splitbelow					"Change default split to below
+set splitright					"Change default vsplit to right
 
 nmap <C-J> <C-W><C-J>
 nmap <C-K> <C-W><C-K>
@@ -33,6 +28,7 @@ nmap <C-L> <C-W><C-L>
 
 "Make it easy to edit the vimrc file.
 nmap <Leader>ev :tabedit $MYVIMRC<cr>
+nmap <leader>s :source ~/.vimrc<cr>
 nmap <Leader><space> :nohlsearch<cr>
 
 "Make NERDTree easier to toggle
