@@ -43,6 +43,14 @@ nmap <Leader>e :CtrlPMRUFiles<cr>
 nmap <Leader>r :CtrlPBufTag<cr>
 
 
+"----------Plugins configuration----------"
+"CtrlP configuration
+let g:ctrlp_custom_ignore = 'node_modules\DS_Store\|git'
+let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:10'
+
+"NERDTree configuration
+let NERDTreeHijackNetrw = 0
+
 "----------Auto-commands----------"
 
 "Automatically source the vimrc file on save.
@@ -50,3 +58,4 @@ augroup autosourcing
 	autocmd!
 	autocmd BufWritePost .vimrc source %
 augroup END
+
