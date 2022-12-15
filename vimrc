@@ -10,7 +10,7 @@ set number					"Activate line numbers
 
 
 "----------Visuals----------"
-colorscheme atom-dark-256
+colorscheme tomorrow-night
 set t_CO=256 					"Use 256 colors.
 
 
