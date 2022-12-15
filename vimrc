@@ -28,7 +28,7 @@ nmap <C-L> <C-W><C-L>
 
 "Make it easy to edit the vimrc file.
 nmap <Leader>ev :tabedit $MYVIMRC<cr>
-nmap <leader>s :source ~/.vimrc<cr>
+nmap <Leader>s :source ~/.vimrc<cr>
 nmap <Leader><space> :nohlsearch<cr>
 
 "Make NERDTree easier to toggle
