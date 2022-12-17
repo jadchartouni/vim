@@ -38,10 +38,27 @@ set timeout timeoutlen=200 ttimeoutlen=100	" Adjust timeout
 "---------- Mappings ----------"
 
 " Make it easier to move between splits
-nmap <C-J> <C-W><C-J>
-nmap <C-K> <C-W><C-K>
-nmap <C-H> <C-W><C-H>
-nmap <C-L> <C-W><C-L>
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-h> <C-w>h
+nmap <C-l> <C-w>l
+
+" Fast save
+nmap <leader>w :w!<cr>
+
+" Easy escaping to normal model
+imap jj <esc>
+
+" Down is really the next line
+nnoremap <expr> j v:count == 0 ? 'gj' : 'j'
+nnoremap <expr> k v:count == 0 ? 'gk' : 'k'
+
+"Auto change directory to match current file ,cd
+nnoremap ,cd :cd %:p:h<cr>:pwd<cr>
+
+" Quickly go forward or backward to buffer
+nmap :bp :BufSurfBack<cr>
+nmap :bn :BufSurfForward<cr>
 
 " Make it easy to edit the vimrc file.
 nmap <Leader>ev :tabedit $MYVIMRC<cr>
