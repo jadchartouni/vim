@@ -61,16 +61,16 @@ nmap :bp :BufSurfBack<cr>
 nmap :bn :BufSurfForward<cr>
 
 " Make it easy to edit the vimrc file.
-nmap <Leader>ev :tabedit $MYVIMRC<cr>
-nmap <Leader>s :source ~/.vimrc<cr>
-nmap <Leader><space> :nohlsearch<cr>
+nmap <leader>ev :tabedit $MYVIMRC<cr>
+nmap <leader>s :source ~/.vimrc<cr>
+nmap <leader><space> :nohlsearch<cr>
 
 " Make NERDTree easier to toggle
-nmap <Leader>1 :NERDTreeToggle<cr>
+nmap <leader>1 :NERDTreeToggle<cr>
 
 " Make CtrlP Buf easier to toggle
-nmap <Leader>e :CtrlPMRUFiles<cr>
-nmap <Leader>r :CtrlPBufTag<cr>
+nmap <leader>e :CtrlPMRUFiles<cr>
+nmap <leader>r :CtrlPBufTag<cr>
 
 
 "---------- Plugins configuration ----------"
