@@ -79,7 +79,7 @@ nmap <leader>f :tag<space>
 "---------- Plugins configuration ----------"
 " CtrlP configuration
 let g:ctrlp_custom_ignore = 'node_modules\DS_Store\|git'
-let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:10'
+let g:ctrlp_match_window = 'bottom,order:ttb,min:1,max:30,results:10'
 
 " NERDTree configuration
 let NERDTreeHijackNetrw = 0
