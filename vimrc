@@ -53,7 +53,7 @@ imap jj <esc>
 nnoremap <expr> j v:count == 0 ? 'gj' : 'j'
 nnoremap <expr> k v:count == 0 ? 'gk' : 'k'
 
-"Auto change directory to match current file ,cd
+" Auto change directory to match current file ,cd
 nnoremap ,cd :cd %:p:h<cr>:pwd<cr>
 
 " Quickly go forward or backward to buffer
@@ -71,6 +71,9 @@ nmap <leader>1 :NERDTreeToggle<cr>
 " Make CtrlP Buf easier to toggle
 nmap <leader>e :CtrlPMRUFiles<cr>
 nmap <leader>r :CtrlPBufTag<cr>
+
+" Look for a tag
+nmap <leader>f :tag<space>
 
 
 "---------- Plugins configuration ----------"
