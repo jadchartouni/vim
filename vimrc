@@ -46,6 +46,7 @@ nmap <C-l> <C-w>l
 
 " Fast save
 nmap <leader>w :w!<cr>
+nmap <leader><space> :nohlsearch<cr>
 
 " Easy escaping to normal model
 imap jj <esc>
@@ -64,13 +65,12 @@ nmap :bn :BufSurfForward<cr>
 " Make it easy to edit the vimrc file.
 nmap <leader>ev :tabedit $MYVIMRC<cr>
 nmap <leader>s :source ~/.vimrc<cr>
-nmap <leader><space> :nohlsearch<cr>
 
 " Make NERDTree easier to toggle
 nmap <leader>1 :NERDTreeToggle<cr>
 
 " Make CtrlP Buf easier to toggle
-nmap <leader>e :CtrlPMRUFiles<cr>
+nmap <leader>t :CtrlPMRUFiles<cr>
 nmap <leader>r :CtrlPBufTag<cr>
 
 " Look for a tag
