@@ -69,6 +69,9 @@ nmap <leader>s :source ~/.vimrc<cr>
 " Make NERDTree easier to toggle
 nmap <leader>1 :NERDTreeToggle<cr>
 
+" Make Tagbar easier to toggle
+nmap <leader>2 :TagbarToggle<cr>
+
 " Make CtrlP Buf easier to toggle
 nmap <leader>t :CtrlPMRUFiles<cr>
 nmap <leader>r :CtrlPBufTag<cr>

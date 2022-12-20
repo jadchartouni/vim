@@ -9,6 +9,7 @@ Plugin 'tpope/vim-vinegar'
 Plugin 'preservim/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'itchyny/lightline.vim'
+Plugin 'preservim/tagbar'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
