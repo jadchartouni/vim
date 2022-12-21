@@ -1,7 +1,30 @@
 set nocompatible              			    " Enable the latest Vim settings/options.
 
-so ~/.vim/plugins.vim
 
+"-----------------------------"
+"---------- Plugins ----------"
+"-----------------------------"
+filetype off                                " Required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-vinegar'
+Plugin 'preservim/nerdtree'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'itchyny/lightline.vim'
+Plugin 'preservim/tagbar'
+
+" All of your Plugins must be added before the following line
+call vundle#end()                           " Required
+filetype plugin indent on                   " Required
+
+
+"---------------------------------------"
+"---------- Vim configuration ----------"
+"---------------------------------------"
 syntax enable
 
 let mapleader = ','				            " The default leader is \, but a comma is much better.
@@ -36,13 +59,19 @@ set timeout timeoutlen=200 ttimeoutlen=100	" Adjust timeout
 set noshowmode                              " Hide the default mode text
 
 
+"------------------------------"
 "---------- Mappings ----------"
+"------------------------------"
 
 " Make it easier to move between splits
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-h> <C-w>h
 nmap <C-l> <C-w>l
+
+" Make it easy to edit the vimrc file.
+nmap <leader>ev :tabedit $MYVIMRC<cr>
+nmap <leader>s :source ~/.vimrc<cr>
 
 " Fast save
 nmap <leader>w :w!<cr>
@@ -62,34 +91,43 @@ nnoremap ,cd :cd %:p:h<cr>:pwd<cr>
 nmap :bp :BufSurfBack<cr>
 nmap :bn :BufSurfForward<cr>
 
-" Make it easy to edit the vimrc file.
-nmap <leader>ev :tabedit $MYVIMRC<cr>
-nmap <leader>s :source ~/.vimrc<cr>
+" Look for a tag
+nmap <leader>f :tag<space>
 
-" Make NERDTree easier to toggle
-nmap <leader>1 :NERDTreeToggle<cr>
 
-" Make Tagbar easier to toggle
-nmap <leader>2 :TagbarToggle<cr>
+"-------------------------------------------"
+"---------- Plugins configuration ----------"
+"-------------------------------------------"
+"/
+"/ CtrlP configuration
+"/
+let g:ctrlp_custom_ignore = 'node_modules\DS_Store\|git'
+let g:ctrlp_match_window = 'bottom,order:ttb,min:1,max:30,results:30'
 
 " Make CtrlP Buf easier to toggle
 nmap <leader>t :CtrlPMRUFiles<cr>
 nmap <leader>r :CtrlPBufTag<cr>
 
-" Look for a tag
-nmap <leader>f :tag<space>
 
-
-"---------- Plugins configuration ----------"
-" CtrlP configuration
-let g:ctrlp_custom_ignore = 'node_modules\DS_Store\|git'
-let g:ctrlp_match_window = 'bottom,order:ttb,min:1,max:30,results:30'
-
-" NERDTree configuration
+"/
+"/ NERDTree configuration
+"/
 let NERDTreeHijackNetrw = 0
 
+" Make NERDTree easier to toggle
+nmap <leader>1 :NERDTreeToggle<cr>
 
+
+"/
+"/ Tagbar configuration
+"/
+" Make Tagbar easier to toggle
+nmap <leader>2 :TagbarToggle<cr>
+
+
+"-----------------------------------"
 "---------- Auto-commands ----------"
+"-----------------------------------"
 
 " Automatically source the vimrc file on save.
 augroup autosourcing
