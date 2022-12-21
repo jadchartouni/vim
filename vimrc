@@ -16,6 +16,8 @@ Plugin 'preservim/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'preservim/tagbar'
+Plugin 'rking/ag.vim'
+Plugin 'skwp/greplace.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()                           " Required
@@ -116,6 +118,13 @@ let NERDTreeHijackNetrw = 0
 
 " Make NERDTree easier to toggle
 nmap <leader>1 :NERDTreeToggle<cr>
+
+
+"/
+"/ Greplace configuration
+"/
+set grepprg=ag
+let g:grep_cmd_opts = '--line-numbers --noheading'
 
 
 "/
