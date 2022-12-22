@@ -40,7 +40,7 @@ set showmode 					            " Always show current mode
 set nowrap					                " Don't wrap lines by default
 set nobackup					            " Delete backup file immediately on successful write
 set autowrite 					            " Save on buffer switch
-set number					                " Activate line numbers
+set number relativenumber	                " Activate line numbers
 set tabstop=4 					            " A tab is four spaces
 set smarttab
 set softtabstop=4 				            " When deleting, pretend 4 spaces are a tab
