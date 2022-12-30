@@ -59,6 +59,7 @@ set visualbell 					            " Don't beep
 set noerrorbells 				            " Don't beep
 set timeout timeoutlen=200 ttimeoutlen=100	" Adjust timeout
 set noshowmode                              " Hide the default mode text
+set cursorline                              " Show cursor line
 
 
 "------------------------------"
